@@ -41,13 +41,13 @@ export class AppComponent implements IAppComponent{
 
   constructor(){
     const  myClass = new MyClass();
-    console.log(myClass.arrays)
+    console.log(myClass)
 
-    this.addItem('Hello');
-    this.addItem('world');
-    console.log(this.items)
-    this.removeItem(0)
-    console.log(this.items)
+    // this.addItem('Hello');
+    // this.addItem('world');
+    // console.log(this.items)
+    // this.removeItem(0)
+    // console.log(this.items)
     
     /**
      * declear value
@@ -71,7 +71,7 @@ export class AppComponent implements IAppComponent{
 
 }
 
-
+@MyDecorator('Hello World')
 class MyClass {
   arrays:Number[] = [200, 300,400,500]
   objects = {
@@ -117,3 +117,9 @@ interface IAppComponent {
   removeItem(index:number)
 }
 
+
+function MyDecorator(message:string){
+  return function(target:Function){
+    target.prototype.sayHello = message
+  }
+}
