@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {IAppComponent} from './my-simple/app.interface'
+import { from } from 'rxjs';
+import { MyClass } from './my-simple/my.class';
 
 @Component({
   selector: 'app-root',
@@ -71,55 +74,8 @@ export class AppComponent implements IAppComponent{
 
 }
 
-@MyDecorator('Hello World')
-class MyClass {
-  arrays:Number[] = [200, 300,400,500]
-  objects = {
-    firstname: 'my Firstname',
-    lastname: 'my Lastname'
-  }
 
 
-  /**
-   * declear function
-   * defualt: plublic
-   */
-  onFunction(param:string):string{
-    return `onFunction ${param}`;
-  }
-
-  /**
-   * change funaction to property 
-   * good for do something before return
-   */
-  get onGetFunction():string{
-    const sum = 2 + 2 + 2 * 3;
-    return `GetFunction : ${sum}`;
-  }
-
-  constructor () {
-    this.arrays.push(600);
-    this.arrays.push(700);
-  }
-
-}
 
 
-/**
- * rule of class control popertis
- * interface no constructor
- * 
- * get array
- */
-interface IAppComponent {
-  items:Array<string>;
-  addItem(item:string);
-  removeItem(index:number)
-}
 
-
-function MyDecorator(message:string){
-  return function(target:Function){
-    target.prototype.sayHello = message
-  }
-}
