@@ -14,6 +14,9 @@ export class AppComponent {
   
    header:string = 'Basic angular 7';
    title:string = 'Angular 7 is very ez';
+   button:string = "เนื้อหาเพิ่มเติม";
+   content:string = `
+   With <a href= "http://google.com">supporting</a> text below as a natural lead-in to additional content.`
 
    constructor(){
      setTimeout(()=>{
