@@ -18,9 +18,22 @@ export class AppComponent {
    content:string = `
    With <a href= "http://google.com">supporting</a> text below as a natural lead-in to additional content.`
 
+
+   boxId:string = `box-${Math.random()}`;
+   linkAddress:string = "https://getbootstrap.com";
+   jugjig:string = "angular coded by jugjig"
+    styleColor:string = "red"
+
+    alertClass:string = "alert alert-primary"
+    isSuccess:boolean = true; // สำหรับตรวจสอบ ng class
+
    constructor(){
      setTimeout(()=>{
+       this.styleColor='blue'
+       this.isSuccess = false;
       this.title = 'คอร์สพื้นฐาน Agular 7 ง่ายมาก';
+      this.alertClass = "alert alert-danger"
+    
      },1000)
      
    }
