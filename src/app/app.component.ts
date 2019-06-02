@@ -44,9 +44,9 @@ export class AppComponent implements IAppComponent{
 
   constructor(){
     const  myClass = new MyClass();
-    console.log(myClass)
+    // console.log(myClass)
 
-    console.log(configs)
+    // console.log(configs)
 
     // this.addItem('Hello');
     // this.addItem('world');
