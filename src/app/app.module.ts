@@ -8,10 +8,14 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 
 import {FormsModule} from '@angular/forms'
 import { from } from 'rxjs';
+import { Com2Component } from './com2/com2.component';
+import { Com1Component } from './com1/com1.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Com2Component,
+    Com1Component
   ],
   imports: [
     BrowserModule,
