@@ -1,25 +1,39 @@
 <div class="container">
-  <br>
+  <br />
 
   <div class="card" [id]="boxId">
-    <div class="card-header">
-      {{header}}
+    <div class="card-header" (mouseover)="onHoverChangeText('พื้นฐาน ABGULAR 7')" (mouseout)="onHoverChangeText('Basic angular 7')" >
+      {{ header }}
     </div>
     <div class="card-body">
-      <h5 class="card-title" [style.color]="styleColor">{{title}} </h5>
-      <p class="card-text"[innerHTML]="content" ></p>
-      <a [attr.jugjig] ="jugjig" [href]="linkAddress" class="btn btn-primary" [innerText]="button"></a>
+      <h5 class="card-title" [style.color]="styleColor">{{ title }}</h5>
+      <p class="card-text" [innerHTML]="content"></p>
+      <a
+        [attr.jugjig]="jugjig"
+        [href]="linkAddress"
+        class="btn btn-primary"
+        [innerText]="button"
+      ></a>
+      <span> | </span>
+      <button class="btn btn-warning" (click)="onClick($event.target)">
+        Event Button
+      </button>
     </div>
   </div>
 
-  <br>
+  <br />
 
-  <div [class]="alertClass" role="alert">
-    This is a primary alert—check it out!
+  <div [hidden]="isHideAlert">
+    <div [class]="alertClass" role="alert">
+      This is a primary alert—check it out!
+    </div>
+
+    <div
+      class="alert"
+      [ngClass]="{ 'alert-success': isSuccess, 'alert-warning': !isSuccess }"
+      role="alert"
+    >
+      This is a success alert—check it out!
+    </div>
   </div>
-
-  <div class="alert" [ngClass]="{'alert-success': isSuccess, 'alert-warning': !isSuccess}" role="alert">
-    This is a success alert—check it out!
-  </div>
-
 </div>

@@ -27,6 +27,8 @@ export class AppComponent {
     alertClass:string = "alert alert-primary"
     isSuccess:boolean = true; // สำหรับตรวจสอบ ng class
 
+    isHideAlert:boolean = true
+
    constructor(){
      setTimeout(()=>{
        this.styleColor='blue'
@@ -37,6 +39,24 @@ export class AppComponent {
      },1000)
      
    }
+
+   onClick(element){
+    //  console.log(element)
+     console.log("Event button click by angular")
+    this.isHideAlert = !this.isHideAlert
+    }
+
+    onHoverChangeText(text){
+      this.header = text;
+    }
+    // onMouseOver(text:string){
+    //   console.log("mouse over")
+    //   this.header = text;
+    // }
+
+    // onMouseOut(){
+    //   console.log("mouse out")
+    // }
 }
 
 
