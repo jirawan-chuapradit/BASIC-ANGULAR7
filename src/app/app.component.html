@@ -18,6 +18,12 @@
       <button class="btn btn-warning" (click)="onClick($event.target)">
         Event Button
       </button>
+
+      <div class="mt-3 form-group">
+        <label for="">Input data : </label>
+        <input type="text" class="form-control w-25" (keyup)="onInputData($event.target)">
+      </div>
+
     </div>
   </div>
 

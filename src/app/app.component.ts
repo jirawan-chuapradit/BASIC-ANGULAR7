@@ -11,7 +11,7 @@ export class AppComponent {
    * this is property
    * only static, public, private, proteced
    */
-  
+
    header:string = 'Basic angular 7';
    title:string = 'Angular 7 is very ez';
    button:string = "เนื้อหาเพิ่มเติม";
@@ -35,9 +35,9 @@ export class AppComponent {
        this.isSuccess = false;
       this.title = 'คอร์สพื้นฐาน Agular 7 ง่ายมาก';
       this.alertClass = "alert alert-danger"
-    
+
      },1000)
-     
+
    }
 
    onClick(element){
@@ -57,6 +57,11 @@ export class AppComponent {
     // onMouseOut(){
     //   console.log("mouse out")
     // }
+
+    onInputData(input:HTMLInputElement){
+      // console.log(input.value)
+      this.title = input.value
+    }
 }
 
 
