@@ -3,7 +3,11 @@
   <hr />
   <div class="row">
     <div class="col-sm">
+      <!-- for lecture input -->
       <app-com1 [message]="message"></app-com1>
+
+      <!-- for lecture local elment and view chile -->
+      <app-com1 #com1></app-com1>
     </div>
     <div class="col-sm">
       <app-com2 (onMessage)="onMessage($event)" ></app-com2>
