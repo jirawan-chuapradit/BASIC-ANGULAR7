@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  message:string = "Basic Input for component"
+  message:string = "Basic Input for component";
+
+  //get data from output com2
+  onMessage(message:string){
+    console.log(this.message = message)
+  }
 }
 
 
