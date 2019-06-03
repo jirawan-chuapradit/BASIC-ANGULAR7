@@ -10,15 +10,13 @@ import { Com1Component } from './com1/com1.component';
 export class AppComponent {
 
   message:string = "Basic Input for component";
+  delete:boolean = false;
 
-  @ViewChild('com1') com1:Com1Component;
+
   //get data from output com2
   onMessage(message:string){
-    // console.log(this.message = message)
-
-    console.log("message com1 : "+ this.com1.message)
-    this.message =message
-    this.com1.message = message
+    console.log(this.message = message)
+    this.message =message;
   }
 }
 
