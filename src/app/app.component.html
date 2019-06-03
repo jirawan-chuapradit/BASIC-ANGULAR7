@@ -19,9 +19,15 @@
         Event Button
       </button>
 
+      <!--
+        blinding event ( ) blinding data [ ]
+         [value]="title" (keyup)="title = $event.target.value"
+
+           มันมีวิธี ngModel
+        -->
       <div class="mt-3 form-group">
         <label for="">Input data : </label>
-        <input type="text" class="form-control w-25" (keyup)="onInputData($event.target)">
+        <input type="text" class="form-control w-50" [(ngModel)]="title">
       </div>
 
     </div>

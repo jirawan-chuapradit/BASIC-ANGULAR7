@@ -14,20 +14,20 @@ export class AppComponent {
 
    header:string = 'Basic angular 7';
    title:string = 'Angular 7 is very ez';
-   button:string = "เนื้อหาเพิ่มเติม";
+   button:string = 'เนื้อหาเพิ่มเติม';
    content:string = `
    With <a href= "http://google.com">supporting</a> text below as a natural lead-in to additional content.`
 
 
-   boxId:string = `box-${Math.random()}`;
-   linkAddress:string = "https://getbootstrap.com";
-   jugjig:string = "angular coded by jugjig"
-    styleColor:string = "red"
+   boxId: string = `box-${Math.random()}`;
+   linkAddress:string = 'https://getbootstrap.com';
+   jugjig:string = 'angular coded by jugjig';
+    styleColor:string = 'red';
 
     alertClass:string = "alert alert-primary"
     isSuccess:boolean = true; // สำหรับตรวจสอบ ng class
 
-    isHideAlert:boolean = true
+    isHideAlert:boolean = true;
 
    constructor(){
      setTimeout(()=>{
@@ -58,10 +58,7 @@ export class AppComponent {
     //   console.log("mouse out")
     // }
 
-    onInputData(input:HTMLInputElement){
-      // console.log(input.value)
-      this.title = input.value
-    }
+
 }
 
 

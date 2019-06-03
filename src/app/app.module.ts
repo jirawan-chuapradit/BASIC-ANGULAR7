@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { BsDropdownModule } from 'ngx-bootstrap';
 
+import {FormsModule} from '@angular/forms'
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { BsDropdownModule } from 'ngx-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
