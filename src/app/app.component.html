@@ -1,51 +1,14 @@
-<div class="container">
-  <br />
-
-  <div class="card" [id]="boxId">
-    <div class="card-header" (mouseover)="onHoverChangeText('พื้นฐาน ABGULAR 7')" (mouseout)="onHoverChangeText('Basic angular 7')" >
-      {{ header }}
+<div class="container mt-4">
+  <h1>Basic Component</h1>
+  <hr />
+  <div class="row">
+    <div class="col-sm">
+      <app-com1 message="This is input form 1"></app-com1>
+      <app-com1 message="This is input form 2"></app-com1>
+      <app-com1 [message]="message"></app-com1>
     </div>
-    <div class="card-body">
-      <h5 class="card-title" [style.color]="styleColor">{{ title }}</h5>
-      <p class="card-text" [innerHTML]="content"></p>
-      <a
-        [attr.jugjig]="jugjig"
-        [href]="linkAddress"
-        class="btn btn-primary"
-        [innerText]="button"
-      ></a>
-      <span> | </span>
-      <button class="btn btn-warning" (click)="onClick($event.target)">
-        Event Button
-      </button>
-
-      <!--
-        blinding event ( ) blinding data [ ]
-         [value]="title" (keyup)="title = $event.target.value"
-
-           มันมีวิธี ngModel
-        -->
-      <div class="mt-3 form-group">
-        <label for="">Input data : </label>
-        <input type="text" class="form-control w-50" [(ngModel)]="title">
-      </div>
-
-    </div>
-  </div>
-
-  <br />
-
-  <div [hidden]="isHideAlert">
-    <div [class]="alertClass" role="alert">
-      This is a primary alert—check it out!
-    </div>
-
-    <div
-      class="alert"
-      [ngClass]="{ 'alert-success': isSuccess, 'alert-warning': !isSuccess }"
-      role="alert"
-    >
-      This is a success alert—check it out!
+    <div class="col-sm">
+      <app-com2></app-com2>
     </div>
   </div>
 </div>
